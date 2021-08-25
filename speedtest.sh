@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # These values can be overwritten with env variables
 LOOP="${LOOP:-false}"
 LOOP_DELAY="${LOOP_DELAY:-60}"
