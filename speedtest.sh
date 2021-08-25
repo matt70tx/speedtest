@@ -29,7 +29,7 @@ run_speedtest()
     if $DB_SAVE;
     then
         echo "Saving values to database..."
-        if $DB_V2
+        if $DB_V2;
         then
             save_v2
         else
