@@ -50,10 +50,10 @@ save_v1()
 save_v2()
 {
     # InfluxDB v2 use a token and not user/pass
-    curl -s -S -XPOST "$DB_HOST//api/v2/write?org=$DB_ORG&bucket=$DB_BUCKET&precision=s" \
+    curl -s -S -XPOST "$DB_HOST/api/v2/write?org=$DB_ORG&bucket=$DB_BUCKET&precision=s" \
         --header "Authorization: Token $DB_TOKEN" \
         --data-binary "download,host=$HOSTNAME value=$DOWNLOAD $DATE"
-    curl -s -S -XPOST "$DB_HOST//api/v2/write?org=$DB_ORG&bucket=$DB_BUCKET&precision=s" \
+    curl -s -S -XPOST "$DB_HOST/api/v2/write?org=$DB_ORG&bucket=$DB_BUCKET&precision=s" \
         --header "Authorization: Token $DB_TOKEN" \
         --data-binary "upload,host=$HOSTNAME value=$UPLOAD $DATE"
 }
